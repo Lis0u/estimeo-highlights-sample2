@@ -21,9 +21,10 @@ describe('<Header />', () => {
         expect(shallow(<Header />).contains(<link rel="stylesheet" href="/static/css/estimeo-style.css"/>)).toBe(true)
     })
 
-    it('style', () => {
-        const wrapper = shallow(<Header />)
-        expect(wrapper.find('style')).to.have.length(1)
+
+    it('has style tag', () => {
+        const wrapper = shallow(<Header />);
+        expect(wrapper.find('style').length).toBe(1)
     })
 
 })
